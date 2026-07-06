@@ -1,0 +1,79 @@
+/* עיצוב כללי של העמוד והוספת תמונת הרקע */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image: url('PIC/jungle.jpg'); /* תמונת הרקע מהתיקייה */
+    background-size: cover; /* מוודא שהתמונה תכסה את כל המסך */
+    background-position: center; /* ממרכז את התמונה */
+    background-attachment: fixed; /* התמונה נשארת במקום גם אם גוללים למטה */
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+    color: white; /* טקסט לבן כדי שיבלוט על רקע התמונה */
+}
+
+/* עיצוב הכותרות */
+h1 {
+    font-size: 3.5rem;
+    margin-bottom: 5px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8); /* צל שחור מסביב לטקסט לקריאות טובה יותר */
+}
+
+.subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 40px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+/* המיכל שמחזיק את כל הפריטים */
+.jungle-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* עיצוב של כל קוביית חיה */
+.item {
+    background-color: rgba(255, 255, 255, 0.85); /* רקע לבן כמעט אטום כדי שהתמונה תבלוט */
+    border: 3px solid #4CAF50; /* מסגרת ירוקה */
+    border-radius: 15px;
+    padding: 10px;
+    width: 130px;
+    height: 130px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 2px 4px 15px rgba(0, 0, 0, 0.4);
+    cursor: pointer; /* הופך את סמן העכבר ליד לוחצת */
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+/* עיצוב התמונות בתוך הקוביות */
+.item img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain; /* שומר על הפרופורציות של התמונה שלא תימעך */
+    border-radius: 8px;
+}
+
+/* אפקט ריחוף כשהעכבר עובר על הפריט */
+.item:hover {
+    transform: scale(1.08); /* מגדיל מעט את הקובייה */
+    background-color: rgba(255, 255, 255, 1); /* הופך את הרקע ללבן אטום לגמרי */
+}
+/* ---  להתאמה למסכים קטנים --- */
+@media (max-width: 600px) {
+    .item {
+        width: 90px;
+        height: 90px;
+        padding: 5px;
+    }
+    h1 {
+        font-size: 2.5rem;
+    }
+    .subtitle {
+        font-size: 1.2rem;
+    }
+}
