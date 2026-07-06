@@ -1,7 +1,7 @@
 /* עיצוב כללי של העמוד והוספת תמונת הרקע */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-image: url('pic/jungle.jpg'); /* תמונת הרקע מהתיקייה */
+    background-image: url('pic/JUNGLE.jpg'); /* תמונת הרקע מהתיקייה */
     background-size: cover; /* מוודא שהתמונה תכסה את כל המסך */
     background-position: center; /* ממרכז את התמונה */
     background-attachment: fixed; /* התמונה נשארת במקום גם אם גוללים למטה */
